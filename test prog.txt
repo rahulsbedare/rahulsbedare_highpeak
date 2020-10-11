@@ -1,0 +1,70 @@
+#include <iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+
+int main()
+{
+    srand((unsigned)time(0));
+    int randomnumber,m,large,small;
+    int b[10];
+    cout<<"Number of employee"<<endl;
+    cin>>m;
+    for(int index=0; index<m ; index++)
+    {
+        randomnumber= (rand()%10)+1;
+        cout<<randomnumber<<endl;
+        switch(randomnumber)
+        {
+            case 1 : b[index]=7980;
+                     cout<<"Fitbit plus: 7980"<<endl;
+                     break;
+
+            case 2: b[index]=22349;
+                    cout<<"Ipods : 22349"<<endl;
+                    break;
+
+            case 3 : b[index]=999;
+                   cout<<"MI Band : 999"<<endl;
+                   break;
+
+            case 4 : b[index]=2799;
+                   cout<<" cult pass = 2799"<<endl;
+                   break;
+
+            case 5 : b[index]=229900;
+                    cout<<"Macbook pro : 229900"<<endl;
+                    break;
+
+            case 6 : b[index]=111011;
+                    cout<<"digital camera : 111011"<<endl;
+                    break;
+
+            case 7 : b [index]=9999;
+                    cout<<"Alexa = 9999"<<endl;
+                    break;
+
+            case 8 : b[index]=2195;
+                    cout<<"sandwich toaster = 2195"<<endl;
+                    break;
+
+            case 9 : b[index]=9800;
+                    cout<<"microwave oven = 9800"<<endl;
+                    break;
+
+            case 10 : b[index]=4999;
+                    cout<<"scale = 4999"<<endl;
+                    break;
+        }
+    }
+    large=small=b[0];
+    for(int i=1; i<m; i++)
+    {
+        if(b[i]>large)
+            large=b[i];
+        if(b[i]<small)
+            small=b[i];
+    }
+    cout<<"and the difference between the chosen goodie  with highest price and the lowest price is"<<large-small<<endl;
+    return 0;
+}
